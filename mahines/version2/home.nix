@@ -3,6 +3,7 @@
 {
   imports = [
   	../../packages/user/window-managers/i3.nix
+  	../../packages/user/shells/zsh.nix
   ];
   home.username = "domzemahine";
   home.homeDirectory = "/home/domzemahine";
