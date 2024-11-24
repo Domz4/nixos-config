@@ -3,6 +3,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ../../packages/user/theaming/stylix.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -12,6 +13,9 @@
    	builtins.elem (lib.getName pkg) [
 		"corefonts"
 	];
+  
+   programs.zsh.enable = true;
+   stylix.enable = true;
 
    security.polkit.enable = true;
    security.rtkit.enable = true;
@@ -31,12 +35,14 @@
    users.users.domzemahine = {
      isNormalUser = true;
      extraGroups = [ "wheel" ];
+     shell = pkgs.zsh;
      packages = with pkgs; [
        neovim
        firefox
        tree
      ];
    };
+
 
    fonts.packages = with pkgs; [
    	(pkgs.nerdfonts.override {fonts = ["Iosevka" "JetBrainsMono" "FiraCode"]; })

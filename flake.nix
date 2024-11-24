@@ -3,11 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    stylix.url = "github:danth/stylix";
 
-     home-manager = {
-       url = "github:nix-community/home-manager";
-       inputs.nixpkgs.follows = "nixpkgs";
-     };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: 
@@ -20,13 +21,14 @@
         default = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-	    ./mahines/default/configuration.nix
+            ./mahines/default/configuration.nix
           ];
 	};
-        version2 = nixpkgs.lib.nixosSystem {
+        thinkpad = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-	    ./mahines/version2/configuration.nix
+            inputs.stylix.nixosModules.stylix
+            ./mahines/thinkpad/configuration.nix
           ];
       };
 
