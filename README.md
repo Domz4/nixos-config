@@ -14,3 +14,7 @@ User are independant for every user so:
 - git settgins
 - shells
 - configuration for apps
+
+
+Idea for managing programing enviroments:
+

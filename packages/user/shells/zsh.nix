@@ -1,6 +1,10 @@
 {pkgs, config, lib, ... }:
 {
-	home.packages = with pkgs; [ zsh-powerlevel10k oh-my-zsh];
+	home.file = {
+			".local/share/zsh/zsh-autosuggestions".source = "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions";
+      ".local/share/zsh/zsh-powerlevel10k".source = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
+	};
+
 	programs.zsh = {
 		enable = true;
 		dotDir = ".config/zsh";
@@ -22,13 +26,16 @@
 	};
 
 	programs.zsh.initExtra = ''
-	source ~/.p10k.zsh
-
+  ZSH_THEME="powerlevel10k/powerlevel10k"
 	ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaaaba,bold,underline"
 	bindkey '^I ' autosuggest-accept
+
+  [ -f $HOME/.local/share/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh] && \
+  source "$HOME/.local/share/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+  [[ ! -f $HOME/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
 	'';
 
-	home.file = {
-			".local/share/zsh-autosuggestions".source = "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions";
-	};
+	home.packages = with pkgs; [ zsh-powerlevel10k oh-my-zsh];
 }
