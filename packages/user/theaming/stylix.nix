@@ -6,6 +6,7 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/bright.yaml";
+
     # *** CUSTOM THEME ***
     # base16Scheme = {
     #     base00: "1A1B26"

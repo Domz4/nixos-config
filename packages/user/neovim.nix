@@ -8,5 +8,6 @@
 
   home.packages = with pkgs; [
     stylua
+    nixfmt-rfc-style
   ];
 }
