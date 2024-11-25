@@ -30,7 +30,7 @@
 	ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaaaba,bold,underline"
 	bindkey '^I ' autosuggest-accept
 
-  [ -f $HOME/.local/share/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh] && \
+  [ -f $HOME/.local/share/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && \
   source "$HOME/.local/share/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
   [[ ! -f $HOME/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

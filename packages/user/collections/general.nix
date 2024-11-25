@@ -24,5 +24,5 @@
     zip
     unzip
     yt-dlp
-  ]
+  ];
 }
