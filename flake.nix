@@ -11,7 +11,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
+  outputs =
+    { self, nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -19,19 +20,23 @@
     {
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
+          specialArgs = {
+            inherit inputs;
+          };
           modules = [
             ./mahines/default/configuration.nix
           ];
-	};
+        };
         thinkpad = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
+          specialArgs = {
+            inherit inputs;
+          };
           modules = [
             inputs.stylix.nixosModules.stylix
             ./mahines/thinkpad/configuration.nix
           ];
-      };
+        };
 
+      };
     };
-  };
 }
