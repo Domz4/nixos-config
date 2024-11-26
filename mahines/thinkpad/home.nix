@@ -8,6 +8,8 @@
     ../../packages/user/collections/general.nix
     ../../packages/user/file-managers/nautilus.nix
     ../../packages/user/file-managers/yazi.nix
+    ../../packages/user/collections/desktop-environment.nix
+    ../../packages/user/polybar.nix
   ];
 
   programs.home-manager.enable = true;

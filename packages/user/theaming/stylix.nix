@@ -35,18 +35,18 @@
     # # FONTS
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "Monaspice" ]; };
-        name = "Monaspice Krypton";
+        package = pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; };
+        name = "Iosevka Nerd Font";
       };
 
       sansSerif = {
-        package = pkgs.nerdfonts.override { fonts = [ "Monaspice" ]; };
-        name = "Monaspice Krypton";
+        package = pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; };
+        name = "Iosevka Nerd Font";
       };
 
       serif = {
-        package = pkgs.nerdfonts.override { fonts = [ "Monaspice" ]; };
-        name = "Monaspice Krypton";
+        package = pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; };
+        name = "Iosevka Nerd Font";
       };
 
       sizes = {
