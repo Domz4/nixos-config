@@ -1,6 +1,6 @@
 {
   pkgs,
-  lib,
+  inputs,
   ...
 }:
 {
@@ -34,17 +34,17 @@
     # FONTS
     fonts = {
       monospace = {
-        package = pkgs.monaspace.override { fonts = [ "Monospace" ]; };
+        package = pkgs.monaspace.override { fonts = [ "Monaspace Krypton" ]; };
         name = "Monaspace Krypton";
       };
 
       sansSerif = {
-        package = pkgs.monaspace.override { fonts = [ "Monospace" ]; };
+        package = pkgs.monaspace.override { fonts = [ "Monaspace Krypton" ]; };
         name = "Monaspace Krypton";
       };
 
       serif = {
-        package = pkgs.monaspace.override { fonts = [ "Monospace" ]; };
+        package = pkgs.monaspace.override { fonts = [ "Monaspace Krypton" ]; };
         name = "Monaspace Krypton";
       };
 
