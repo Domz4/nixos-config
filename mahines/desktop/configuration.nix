@@ -23,24 +23,18 @@
       "corefonts"
     ];
 
-  programs.zsh.enable = true;
   stylix.enable = true;
+  programs.zsh.enable = true;
+  services.gvfs.enable = true;
 
   security.polkit.enable = true;
   security.rtkit.enable = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  services.xserver = {
-    enable = true;
-    windowManager.i3.enable = true;
-  };
-
-  services.displayManager = {
-    defaultSession = "none+i3";
-  };
-
-  services.gvfs.enable = true;
+  # services.displayManager = {
+  #   defaultSession = "none+xmonad";
+  # };
 
   users.users.domzemahine = {
     isNormalUser = true;

@@ -7,7 +7,7 @@
   stylix = {
     enable = true;
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/shades-of-purple.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/shades-of-purple.yaml";
     # *** CUSTOM THEME ***
 
     # base16Scheme = {
