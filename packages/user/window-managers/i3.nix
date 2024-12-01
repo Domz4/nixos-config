@@ -13,8 +13,15 @@ in
   xsession.windowManager.i3 = {
     enable = true;
     package = pkgs.i3-gaps;
+
     config = {
       modifier = mod;
+
+      startup = [
+        {
+          command = "systemctl -- restart polybar.service";
+        }
+      ];
 
       gaps = {
         inner = 2;

@@ -36,6 +36,14 @@
             ./mahines/thinkpad/configuration.nix
           ];
         };
+        desktop = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [
+            ./mahines/desktop/configuration.nix
+          ];
+        };
 
       };
     };

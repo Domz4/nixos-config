@@ -1,19 +1,21 @@
 {
- pkgs,
- config,
- lib,
- inputs,
- ...
-}: {
+  pkgs,
+  config,
+  lib,
+  inputs,
+  ...
+}:
+{
   programs.lazygit.enable = true;
 
   home.sessionVariables = {
-     EDITOR = "nvim";
+    EDITOR = "nvim";
   };
 
   home.packages = with pkgs; [
     kitty
     fzf
+    xclip
     htop
     ripgrep
     fd
