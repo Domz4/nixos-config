@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../../packages/user/window-managers/xmonad.nix
     ../../packages/user/polybar/polybar.nix
     ../../packages/user/shells/zsh.nix
     ../../packages/user/neovim.nix

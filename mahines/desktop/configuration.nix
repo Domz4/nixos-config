@@ -8,6 +8,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../packages/system/window-managers/xmonad.nix
     ../../packages/user/theaming/stylix.nix
     inputs.home-manager.nixosModules.default
   ];
@@ -32,9 +33,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # services.displayManager = {
-  #   defaultSession = "none+xmonad";
-  # };
+  services.displayManager = {
+    defaultSession = "none+xmonad";
+  };
 
   users.users.domzemahine = {
     isNormalUser = true;
