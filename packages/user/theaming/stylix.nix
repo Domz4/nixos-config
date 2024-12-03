@@ -10,24 +10,24 @@
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/shades-of-purple.yaml";
     # *** CUSTOM THEME ***
 
-    # base16Scheme = {
-    #   base00 = "#091212";
-    #   base01 = "#c9184A";
-    #   base02 = "#3C403F";
-    #   base03 = "#011627";
-    #   base04 = "#9d0208";
-    #   base05 = "#B7094C";
-    #   base06 = "#e01E37";
-    #   base07 = "#73949C";
-    #   base08 = "#ff0055";
-    #   base09 = "#c83332";
-    #   base0A = "#3edb84";
-    #   base0C = "#11ccaa";
-    #   base0B = "#ddb350";
-    #   base0E = "#aF8DfA";
-    #   base0D = "#FF0033";
-    #   base0F = "#FF0011";
-    # };
+    base16Scheme = {
+      base00 = "#101010";
+      base01 = "#171717";
+      base02 = "#3e223e";
+      base03 = "#252525";
+      base04 = "#2c2c2c";
+      base05 = "#d8d9dd";
+      base06 = "#d2d3d7";
+      base07 = "#cccdd1";
+      base08 = "#2a9d8f";
+      base09 = "#ff004d";
+      base0A = "#e9c46a";
+      base0B = "#f4a261";
+      base0C = "#e76e51";
+      base0D = "#901430";
+      base0E = "#ffffff";
+      base0F = "#ffccaa";
+    };
 
     # THEME FROM WALLPAPER
     image = ./wallpaper.jpg;

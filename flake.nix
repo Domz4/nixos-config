@@ -41,6 +41,7 @@
             inherit inputs;
           };
           modules = [
+            inputs.stylix.nixosModules.stylix
             ./mahines/desktop/configuration.nix
           ];
         };

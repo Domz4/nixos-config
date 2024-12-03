@@ -75,19 +75,19 @@ myKeys conf@(XConfig{XMonad.modMask = modm}) =
         , ((modm, xK_n), spawn "nemo")
         , -- kill focused window
           ((modm .|. shiftMask, xK_x), kill)
-        , -- launch rofi and dashboard
-          ((modm, xK_p), rofi_launcher)
+        -- ,  launch rofi and dashboard
+        --   ((modm, xK_p), rofi_launcher)
         , -- , ((modm, xK_o), centerlaunch)
           -- , ((modm .|. shiftMask, xK_o), ewwc4ose)
           ((modm .|. shiftMask, xK_p), spawn "firefox-developer-edition")
         , ((modm, xK_f), spawn "firefox")
         , ((modm .|. shiftMask, xK_Print), spawn "flameshot")
-        , -- launch eww sidebar
+          -- launch eww sidebar
           -- ((modm, xK_s), sidebarlaunch)
           -- , ((modm .|. shiftMask, xK_s), ewwclose)
           -- ((0, xK_Print), maimcopy)
         -- , ((modm, xK_Print), maimsave)
-        , -- My Stuff
+          -- My Stuff
           -- ((modm, xK_b), spawn "exec ~/bin/bartoggle")
         -- , ((modm, xK_v), clipboardy)
         , ((modm .|. controlMask, xK_g), sendMessage $ ToggleGaps) -- toggle all gaps
