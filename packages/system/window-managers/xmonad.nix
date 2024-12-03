@@ -18,6 +18,7 @@
       config = ./xmonad.hs;
       extraPackages = haskellPackages: [
         haskellPackages.ghc
+        haskellPackages.dbus
         haskellPackages.xmonad
         haskellPackages.xmonad-contrib
         haskellPackages.xmonad-extras

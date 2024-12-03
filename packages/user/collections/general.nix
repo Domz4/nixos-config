@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     kitty
+    killall
     fzf
     xclip
     htop
@@ -26,5 +27,6 @@
     zip
     unzip
     yt-dlp
+    xmonad-log
   ];
 }
