@@ -13,6 +13,9 @@
     inputs.home-manager.nixosModules.default
   ];
 
+  # TODO 
+  # move settings to it's relevant modules 
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -24,18 +27,28 @@
       "corefonts"
     ];
 
+  # Sound settings
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+
   stylix.enable = true;
   programs.zsh.enable = true;
   services.gvfs.enable = true;
 
-  security.polkit.enable = true;
-  security.rtkit.enable = true;
+  # bootloader settings
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # dekstop enviroment settings
   services.displayManager = {
     defaultSession = "none+xmonad";
   };
+  security.polkit.enable = true;
+  security.rtkit.enable = true;
 
   users.users.domzemahine = {
     isNormalUser = true;
@@ -48,13 +61,6 @@
     ];
   };
 
-  fonts.packages = with pkgs; [
-    nerdfonts
-    corefonts
-    cm_unicode
-    monaspace
-  ];
-
   home-manager = {
     extraSpecialArgs = {
       inherit inputs;
@@ -63,6 +69,13 @@
       "domzemahine" = import ./home.nix;
     };
   };
+
+  fonts.packages = with pkgs; [
+    nerdfonts
+    corefonts
+    cm_unicode
+    monaspace
+  ];
 
   environment.systemPackages = with pkgs; [
     vim
