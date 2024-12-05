@@ -13,7 +13,9 @@
   };
 
   home.packages = with pkgs; [
+    copyq
     kitty
+    maim
     killall
     fzf
     xclip

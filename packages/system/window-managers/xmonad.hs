@@ -59,14 +59,17 @@ addEWMHFullscreen = do
     wfs <- getAtom "_NET_WM_STATE_FULLSCREEN"
     mapM_ addNETSupported [wms, wfs]
 
-------------------------------------------------------------------------
--- Key bindings. Add, modify or remove key bindings here.
-------------------------------------------------------------------------
--- clipboardy :: (MonadIO m) => m () -- Don't question it
--- clipboardy = spawn "rofi -modi \"\63053 :greenclip print\" -show \"\63053 \" -run-command '{cmd}' -theme ~/.config/rofi/launcher/style.rasi"
--- maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send \"Screenshot\" \"Copied to Clipboard\" -i flameshot"
--- maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png"
--- rofi_launcher = spawn "rofi -no-lazy-grab -show drun -modi run,drun,window -theme $HOME/.config/rofi/launcher/style -drun-icon-theme \"candy-icons\" "
+
+-- Key bindings. 
+
+
+
+clipboardy = spawn "copyq"
+
+maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png "
+maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png"
+
+rofi_launcher = spawn "rofi -no-lazy-grab -show drun -modi run,drun,window"
 
 myKeys conf@(XConfig{XMonad.modMask = modm}) =
     M.fromList $
@@ -76,20 +79,15 @@ myKeys conf@(XConfig{XMonad.modMask = modm}) =
         , -- kill focused window
           ((modm .|. shiftMask, xK_x), kill)
         -- ,  launch rofi and dashboard
-        --   ((modm, xK_p), rofi_launcher)
-        , -- , ((modm, xK_o), centerlaunch)
-          -- , ((modm .|. shiftMask, xK_o), ewwc4ose)
-          ((modm .|. shiftMask, xK_p), spawn "firefox-developer-edition")
+        , ((modm, xK_p), rofi_launcher)
+
         , ((modm, xK_f), spawn "firefox")
         , ((modm .|. shiftMask, xK_Print), spawn "flameshot")
-          -- launch eww sidebar
-          -- ((modm, xK_s), sidebarlaunch)
-          -- , ((modm .|. shiftMask, xK_s), ewwclose)
-          -- ((0, xK_Print), maimcopy)
-        -- , ((modm, xK_Print), maimsave)
+
+        , ((0, xK_Print), maimcopy)
+        , ((modm, xK_Print), maimsave)
           -- My Stuff
-          -- ((modm, xK_b), spawn "exec ~/bin/bartoggle")
-        -- , ((modm, xK_v), clipboardy)
+        , ((modm, xK_v), clipboardy)
         , ((modm .|. controlMask, xK_g), sendMessage $ ToggleGaps) -- toggle all gaps
         , ((modm .|. shiftMask, xK_g), sendMessage $ setGaps [(L, 8), (R, 8), (U, 20), (D, 8)]) -- reset the GapSpec
         , -- Rotate through the available layout algorithms

@@ -42,8 +42,8 @@ in
       "bar/top" = {
         bottom = false;
         cursor-click = "pointer";
-        font-0 = "Monaspace Krypton:size=12;2:weight=bold";
-        height = "26pt";
+        font-0 = "Monaspace Krypton:size=9;2:weight=bold";
+        height = "20pt";
         line-size = "5pt";
         module-margin = 1;
         padding-left = 1;
@@ -99,19 +99,19 @@ in
         label-monitor = "%name%";
 
         label-empty = "%name%";
-        label-empty-padding = "6pt";
-        label-empty-margin-right = "6pt";
+        label-empty-padding = "5pt";
+        label-empty-margin-right = "5pt";
 
         label-active = "%icon%";
         label-active-background = base09;
         label-active-foreground = "#252525";
-        label-active-padding = "6pt";
-        label-active-margin-right = "6pt";
+        label-active-padding = "5pt";
+        label-active-margin-right = "5pt";
 
         label-occupied = "%icon%";
         label-occupied-background = base22;
-        label-occupied-padding = "6pt";
-        label-occupied-margin-right = "6pt";
+        label-occupied-padding = "5pt";
+        label-occupied-margin-right = "5pt";
       };
 
       "modules/date" = {
