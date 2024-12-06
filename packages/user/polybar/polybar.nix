@@ -44,7 +44,7 @@ in
         cursor-click = "pointer";
         font-0 = "Monaspace Krypton:size=9;2:weight=bold";
         height = "20pt";
-        line-size = "5pt";
+        line-size = "3pt";
         module-margin = 1;
         padding-left = 1;
         padding-right = 1;

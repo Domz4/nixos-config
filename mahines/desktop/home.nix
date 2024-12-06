@@ -9,6 +9,7 @@
     ../../packages/user/file-managers/nautilus.nix
     ../../packages/user/file-managers/yazi.nix
     ../../packages/user/collections/desktop-environment.nix
+    ../../packages/user/languages/languages.nix
     ../../packages/user/rofi.nix
   ];
 

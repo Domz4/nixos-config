@@ -9,7 +9,7 @@ import XMonad.Hooks.ManageDocks (
     docks,
     manageDocks,
  )
-import XMonad.Hooks.ManageHelpers (doFullFloat, isFullscreen)
+import XMonad.Hooks.ManageHelpers (doFullFloat, isFullscreen, doRectFloat)
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.Fullscreen (
     fullscreenEventHook,
@@ -64,8 +64,6 @@ addEWMHFullscreen = do
 
 
 
-clipboardy = spawn "copyq"
-
 maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png "
 maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png"
 
@@ -87,7 +85,7 @@ myKeys conf@(XConfig{XMonad.modMask = modm}) =
         , ((0, xK_Print), maimcopy)
         , ((modm, xK_Print), maimsave)
           -- My Stuff
-        , ((modm, xK_v), clipboardy)
+        , ((modm, xK_v), spawn "copyq show")
         , ((modm .|. controlMask, xK_g), sendMessage $ ToggleGaps) -- toggle all gaps
         , ((modm .|. shiftMask, xK_g), sendMessage $ setGaps [(L, 8), (R, 8), (U, 20), (D, 8)]) -- reset the GapSpec
         , -- Rotate through the available layout algorithms
@@ -219,6 +217,7 @@ myManageHook =
         <+> composeAll
             [ className =? "MPlayer" --> doFloat
             , className =? "Gimp" --> doFloat
+            , className =? "copyq" --> doRectFloat (W.RationalRect 0.25 0.25 0.5 0.5)
             , resource =? "desktop_window" --> doIgnore
             , resource =? "kdesktop" --> doIgnore
             , isFullscreen --> doFullFloat

@@ -22,3 +22,4 @@ time you cd into.
 
 TODO 
 [] find out how to install custom fonts
+[] figure out how to manage nvim lsp, languages etc.
