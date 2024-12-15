@@ -99,19 +99,19 @@ in
         label-monitor = "%name%";
 
         label-empty = "%name%";
-        label-empty-padding = "5pt";
-        label-empty-margin-right = "5pt";
+        label-empty-padding = "3pt";
+        label-empty-margin-right = "2pt";
 
         label-active = "%icon%";
         label-active-background = base09;
         label-active-foreground = "#252525";
-        label-active-padding = "5pt";
-        label-active-margin-right = "5pt";
+        label-active-padding = "3pt";
+        label-active-margin-right = "2pt";
 
         label-occupied = "%icon%";
         label-occupied-background = base22;
-        label-occupied-padding = "5pt";
-        label-occupied-margin-right = "5pt";
+        label-occupied-padding = "3pt";
+        label-occupied-margin-right = "2pt";
       };
 
       "modules/date" = {
