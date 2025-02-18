@@ -10,10 +10,10 @@
     ../../packages/user/collections/desktop-environment.nix
     ../../packages/user/languages/languages.nix
     ../../packages/user/rofi.nix
+    ../../packages/user/nxivim/config/default.nix
   ];
 
   programs.home-manager.enable = true;
-
 
   home.username = "domzemahine";
   home.homeDirectory = "/home/domzemahine";
