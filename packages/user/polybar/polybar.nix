@@ -16,7 +16,7 @@ let
   base06 = "#d2d3d7";
   base07 = "#cccdd1";
   base08 = "#2a9d8f";
-  base09 = "#ff004d";
+  base09 = "#ff0036";
   base0A = "#e9c46a";
   base0B = "#f4a261";
   base0C = "#e76e51";
@@ -43,10 +43,8 @@ in
         bottom = false;
         cursor-click = "pointer";
         font-0 = "Monaspace Krypton:size=9;2:weight=bold";
-        height = "20pt";
-        line-size = "3pt";
+        height = "12pt";
         module-margin = 1;
-        padding-left = 1;
         padding-right = 1;
         separator = "  ";
         width = "100%";
@@ -54,7 +52,7 @@ in
         offset-y = "0%";
         modules-left = "xworkspaces";
         modules-right = "cpu memory date";
-        background = "#282828";
+        background = "#181818";
       };
 
       "module/cpu" = {
@@ -100,18 +98,15 @@ in
 
         label-empty = "%name%";
         label-empty-padding = "3pt";
-        label-empty-margin-right = "2pt";
 
         label-active = "%icon%";
         label-active-background = base09;
         label-active-foreground = "#252525";
         label-active-padding = "3pt";
-        label-active-margin-right = "2pt";
 
         label-occupied = "%icon%";
-        label-occupied-background = base22;
+        label-occupied-background = "#99002d";
         label-occupied-padding = "3pt";
-        label-occupied-margin-right = "2pt";
       };
 
       "modules/date" = {

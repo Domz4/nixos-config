@@ -17,8 +17,7 @@ User are independant for every user so:
 
 
 Idea for managing programing enviroments:
-put a flake.nix into projects with all dev deps, and use direnv to source it every
-time you cd into.
+put a flake.nix into projects with all dev deps, and use direnv to source it every time you cd into.
 
 TODO 
 [] find out how to install custom fonts
