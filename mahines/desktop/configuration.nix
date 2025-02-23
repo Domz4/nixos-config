@@ -9,7 +9,7 @@
     ./hardware-configuration.nix
     ../../packages/system/window-managers/xmonad.nix
     ../../packages/user/theaming/stylix.nix
-#    ../../packages/user/neovim/default.nix
+    ../../packages/user/neovim/default.nix
   ];
 
   # TODO 

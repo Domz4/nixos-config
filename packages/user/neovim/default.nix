@@ -12,11 +12,11 @@
 
     colorschemes.gruvbox.enable = true;
 
-    imports = [
-	    ./plugins.nix
-	    ./mappings.nix
-	    ./options.nix
-    ];
+#    imports = [
+#	    ./plugins.nix
+#	    ./mappings.nix
+#	    ./options.nix
+#    ];
   };
 
 }
