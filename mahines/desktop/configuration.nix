@@ -10,15 +10,7 @@
     ../../packages/system/window-managers/xmonad.nix
     ../../packages/user/theaming/stylix.nix
     inputs.home-manager.nixosModules.default
-    inputs.nixvim.nixosModules.nixvim
   ];
-
-  programs.nixvim = {
-	enable = true;
-	imports = [ 
-		../../packages/user/nixvim/config/default.nix
-	];
-  };
 
   # TODO 
   # move settings to it's relevant modules 
