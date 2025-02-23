@@ -10,7 +10,7 @@
     ../../packages/user/collections/desktop-environment.nix
     ../../packages/user/languages/languages.nix
     ../../packages/user/rofi.nix
-    ../../packages/user/nixvim/config/default.nix
+    ../../packages/user/nixvim/default.nix
   ];
 
   programs.home-manager.enable = true;

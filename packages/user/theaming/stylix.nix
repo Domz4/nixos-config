@@ -36,17 +36,17 @@
     # # FONTS
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
+        package = pkgs.nerd-fonts.jetbrains-mono;
         name = "JetBrainsMono Nerd Font Mono";
       };
 
       sansSerif = {
-        package = pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; };
+        package = pkgs.nerd-fonts.iosevka;
         name = "Iosevka Nerd Font";
       };
 
       serif = {
-        package = pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; };
+        package = pkgs.nerd-fonts.iosevka;
         name = "Iosevka Nerd Font";
       };
 

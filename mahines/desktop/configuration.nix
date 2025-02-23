@@ -69,8 +69,8 @@
     };
   };
 
+
   fonts.packages = with pkgs; [
-    nerdfonts
     corefonts
     cm_unicode
     monaspace
