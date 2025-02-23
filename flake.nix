@@ -3,12 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    stylix.url = "github:danth/stylix";
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
+
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -21,7 +21,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in
+    in 
     {
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
@@ -47,6 +47,7 @@
           };
           modules = [
             inputs.stylix.nixosModules.stylix
+	    inputs.nixvim.nixosModules.nixvim
             ./mahines/desktop/configuration.nix
           ];
         };

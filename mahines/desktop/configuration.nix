@@ -9,7 +9,7 @@
     ./hardware-configuration.nix
     ../../packages/system/window-managers/xmonad.nix
     ../../packages/user/theaming/stylix.nix
-    inputs.home-manager.nixosModules.default
+#    ../../packages/user/neovim/default.nix
   ];
 
   # TODO 
