@@ -3,6 +3,7 @@
 {
   imports = [
     ../../packages/user/window-managers/sway.nix
+    inputs.nixvim.homeMangerModules.nixvim
   ];
 
   home.username = "domzemahine";
