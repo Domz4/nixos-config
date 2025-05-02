@@ -4,7 +4,6 @@
   imports = [
     ../../packages/user/polybar/polybar.nix
     ../../packages/user/shells/zsh.nix
-    ../../packages/user/neovim.nix
     ../../packages/user/collections/general.nix
     ../../packages/user/file-managers/nautilus.nix
     ../../packages/user/file-managers/yazi.nix

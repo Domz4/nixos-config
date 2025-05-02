@@ -55,7 +55,7 @@
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      neovim
+      inputs.nixvim.packages."x86_64-linux".default
       firefox
       tree
     ];
