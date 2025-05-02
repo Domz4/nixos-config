@@ -6,7 +6,7 @@
 {
   stylix = {
     enable = true;
-    targets.nixvim.enable = false;
+    #targets.nixvim.enable = false;
 
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/shades-of-purple.yaml";
     # *** CUSTOM THEME ***
