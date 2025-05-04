@@ -13,8 +13,8 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  # TODO 
-  # move settings to it's relevant modules 
+  # TODO
+  # move settings to it's relevant modules
 
   nix.settings.experimental-features = [
     "nix-command"
@@ -55,7 +55,6 @@
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      inputs.nixvim.packages."x86_64-linux".default
       firefox
       tree
     ];
