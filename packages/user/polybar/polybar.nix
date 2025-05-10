@@ -4,6 +4,7 @@
   pkgs,
   ...
 }:
+
 let
   base00 = "#101010";
   base01 = "#171717";
@@ -25,7 +26,6 @@ let
   base0F = "#ffccaa";
 in
 {
-  # fixes polybar not launching at start for some reason
   systemd.user.services.polybar = {
     Install.WantedBy = [ "graphical-session.target" ];
   };
@@ -43,10 +43,8 @@ in
         bottom = false;
         cursor-click = "pointer";
         font-0 = "Monaspace Krypton:size=9;2:weight=bold";
-        height = "20pt";
-        line-size = "3pt";
+        height = "12pt";
         module-margin = 1;
-        padding-left = 1;
         padding-right = 1;
         separator = "  ";
         width = "100%";
@@ -54,7 +52,7 @@ in
         offset-y = "0%";
         modules-left = "xworkspaces";
         modules-right = "cpu memory date";
-        background = "#282828";
+        background = "#181818";
       };
 
       "module/cpu" = {
@@ -69,7 +67,7 @@ in
         type = "internal/memory";
         internal = 2;
         format-prefix = "RAM ";
-        format-prefix-foreground = "#ffffff";
+        format-prefix-foreground = base0E;
         label = "%percentage_used:2%%";
       };
 
@@ -77,6 +75,7 @@ in
         type = "internal/xworkspaces";
         pin-workspaces = true;
         label-padding = 1;
+
         icon-0 = "1;1";
         icon-1 = "2;2";
         icon-2 = "3;3";
@@ -100,21 +99,18 @@ in
 
         label-empty = "%name%";
         label-empty-padding = "3pt";
-        label-empty-margin-right = "2pt";
 
         label-active = "%icon%";
         label-active-background = base09;
         label-active-foreground = "#252525";
         label-active-padding = "3pt";
-        label-active-margin-right = "2pt";
 
         label-occupied = "%icon%";
-        label-occupied-background = base22;
+        label-occupied-background = base0D;
         label-occupied-padding = "3pt";
-        label-occupied-margin-right = "2pt";
       };
 
-      "modules/date" = {
+      "module/date" = {
         type = "internal/date";
         date = "%H:%M %d-%m-%Y";
         interval = 1;
@@ -122,14 +118,14 @@ in
         label-foreground = base09;
       };
 
-      "modules/xmonad" = {
+      "module/xmonad" = {
         type = "custom/script";
         exec = "/home/domzemahine/.nix-profile/bin/xmonad-log";
         interval = 0;
         tail = true;
       };
 
-      "modules/xwindow" = {
+      "module/xwindow" = {
         type = "internal/xwindow";
         label = "%title:0:60:...%";
       };
