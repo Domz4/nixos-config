@@ -31,7 +31,7 @@
     };
 
     # THEME FROM WALLPAPER
-    image = ./wallpaper.jpg;
+    image = ./wallpaper.jpeg;
 
     # # FONTS
     fonts = {

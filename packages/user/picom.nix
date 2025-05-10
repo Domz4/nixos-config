@@ -1,4 +1,4 @@
-{ }:
+{ pkgs, ... }:
 {
   # make picom nix config
   services.picom = {
